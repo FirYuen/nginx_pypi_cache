@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  pypi_proxy:
+    build: .
+    container_name: pypi_proxy
+    ports:
+      - "8890:80"
+    volumes:
+      - "./cache:/var/lib/nginx/pypi"
